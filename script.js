@@ -14,6 +14,10 @@ const btnPlay = document.querySelector('.btn-play-pause');
 const btnNext = document.querySelector('.btn-next');
 const btnPrev = document.querySelector('.btn-prev');
 
+const progressBar = document.querySelector('.progress-bar');
+const curentTimeAudio = document.querySelector('.currentTime');
+const durationAudio = document.querySelector('.durationTime');
+
 let isPlay = false;
 let playNum = 0;
 
@@ -63,10 +67,36 @@ const playPrev = () => {
     playAudio();
 }
 
+const formatTime = (timeSec) => {
+    let min, sec;
+    min = Math.floor(timeSec / 60);
+    sec = Math.floor(timeSec % 60);
+    if (sec < 10){ 
+        sec  = `0${sec}`;
+    };
+    return `${min}:${sec}`;
+}
+
+const updateProgressBar = () => {
+    progressBar.max = song.duration;
+    progressBar.value = song.currentTime;
+    curentTimeAudio.innerHTML = formatTime(song.currentTime);
+    durationAudio.innerHTML = formatTime(song.duration);
+}
+
+const changeProgressBar = () => {
+    console.log('val' + progressBar.value);
+    song.currentTime = progressBar.value;
+}
+
+setInterval(updateProgressBar, 500);
+
 btnPlay.addEventListener('click', playAudio);
 
 song.addEventListener('ended', playNext);
 
 btnNext.addEventListener('click', playNext);
 btnPrev.addEventListener('click', playPrev);
+
+progressBar.addEventListener('click', changeProgressBar);
 
