@@ -26,10 +26,12 @@ const playAudio = () => {
         isPlay = true;
         song.play();
         btnPlay.classList.add('pause');
+        songImg.classList.add('pauseImg');
     } else {
         isPlay = false;
         song.pause();
         btnPlay.classList.remove('pause');
+        songImg.classList.remove('pauseImg');
     }
 }
 

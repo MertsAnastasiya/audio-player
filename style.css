@@ -47,11 +47,19 @@ body {
     left: 9%;
     filter: invert(100%);
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 .song-img {
+    position: absolute;
+    top: 0;
+    transform: scale(1);
+    transition: 0.5s;
+}
 
+.pauseImg {
+    transform: scale(1.15);
+    transition: 0.5s;
 }
 
 .pause {
