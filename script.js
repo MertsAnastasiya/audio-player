@@ -61,6 +61,7 @@ const playPrev = () => {
 
     song.src = arraySongs[playNum].path;
     songImg.src = arraySongs[playNum].pathImage;
+    document.body.style.backgroundImage = `url(${arraySongs[playNum].pathImage})`;
     songArtist.innerHTML = arraySongs[playNum].artist;
     songTitle.innerHTML = arraySongs[playNum].title;
 
