@@ -7,6 +7,24 @@
     <link rel="stylesheet" href="./style.html">
 </head>
 <body>
+    <div class="player">
+        <audio class="song" src="./assets/audio/beyonce.mp3"></audio>
+        <img class="song-img" src="./assets/img/lemonade.png" alt="Song image">
+        <div class="wrap-player-button">
+            <button class="btn-play-pause"></button>
+            <div class="info">
+                <p class="song-artist">Beyonce</p> 
+                <p class="song-title">Don't Hurt Yourself</p>
+            </div>
+            <div>
+                <img class="btn-next" src="./assets/svg/forward.png" alt="Next Song">    
+                <img class="btn-prev" src="./assets/svg/backward.png" alt="Previous Song">   
+            </div>
+            <input type="range" class="progress-bar" min="0" max="" value="0" />
+            <div class="currentTime">0:00</div>
+            <div class="durationTime">0:00</div>
+        </div>
+    </div>
     <script src="./script.js"></script>
 </body>
 </html>
