@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url('./assets/img/lemonade.png') no-repeat;
+    background-size: cover;
+}
+
+.player {
+    position: relative;
+    height: 300pt;
+    width: 250pt;
+    margin: auto;
+    margin-top: 10%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000000;
+}
+
+.wrap-player-button {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 33%;
+    background: linear-gradient(45deg, rgb(40, 40, 40), rgb(133, 133, 133));;
+}
+
+.btn-play-pause {
+    height: 50px;
+    width: 50px;
+    background: url('./assets/svg/play.png') no-repeat;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    top: 18%;
+    left: 9%;
+    filter: invert(100%);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.song-img {
+
+}
+
+.pause {
+    position: absolute;
+    top: 18%;
+    left: 9%;
+    height: 50px;
+    width: 50px;
+    background: url('./assets/svg/pause.png') no-repeat;
+    background-size: cover;
+    border: none;
+    filter: invert(100%);
+}
+
+.btn-next, .btn-prev {
+    position: absolute;
+    display: block;
+    height: 30px;
+    width: 30px;
+    filter: invert(100%);
+    cursor: pointer;
+}
+
+.btn-next {
+    top: 12.5%;
+    right: 10%;
+}
+
+.btn-prev {
+    right: 10.3%;
+    top: 35.5%;
+}
+
+.song-artist {
+    position: absolute;
+    top: 20%;
+    left: 28%;
+    color: #AAD922;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.song-title {
+    position: absolute;
+    top: 35%;
+    left: 28%;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    text-transform: capitalize;
+}
+
+.currentTime {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    bottom: -22.5%;
+    left: 18%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: white;
+    align-items: center;
+}
+
+.durationTime {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    bottom: -4%;
+    right: 11%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    align-items: center;
+    color: rgb(193, 255, 6);
+}
+
+.progress-bar {
+    display: block;
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+    height: 5px;
+    background: #000000;
+    width: 160pt;
+    bottom: 17%;
+    left: 18%;
+    border-radius: 30px;
+}
+
+.progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    margin-top: -3px;
+    margin-left: 0px;
+    height: 10px;
+    width: 7px;
+    border: 0;
+    background: -webkit-linear-gradient(45deg,  rgb(213, 213, 213), rgb(193, 255, 6));
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.progress-bar::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    max-height: 5px;
+    border-radius: 30px;
+}
+
+.progress-bar:focus {
+    outline: none;
+}
