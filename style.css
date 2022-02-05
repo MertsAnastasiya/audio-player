@@ -176,3 +176,42 @@ body {
 .progress-bar:focus {
     outline: none;
 }
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 10px;
+    background: linear-gradient(45deg, rgb(40, 40, 40), rgb(133, 133, 133));
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+.git, .rss {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 20px;
+    transform: scale(1);
+} 
+
+.rs-school {
+    width: 100px;
+    height: 50px;
+    filter: invert(1);
+}
+
+.git-hub {
+    width: 100px;
+    height: 50px;
+    filter: invert(1);
+}
+
+.rs-school:hover, .git-hub:hover{
+    filter: invert(80%) sepia(88%) saturate(521%) hue-rotate(19deg) brightness(107%) contrast(100%);
+    transform: scale(1.15);
+    transition: 0.3s;
+}
